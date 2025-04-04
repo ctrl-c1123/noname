@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贪玩蓝月经典重做，是兄弟就来砍我！！！</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        video {
+            position: fixed; /* 固定位置 */
+            top: 0;
+            left: 0;
+            width: 100%; /* 宽度占满 */
+            height: 100%; /* 高度占满 */
+            object-fit: cover; /* 保持视频比例，覆盖整个区域 */
+            z-index: -1; /* 确保视频在内容下方 */
+        }
+
+        .login-container {
+            background-image: url('/static/picture/2.png');
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 550px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #6b48ff;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #17151e;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #780808;
+        }
+
+
+        @media (max-width: 480px) {
+            .login-container {
+                margin: 20px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>用户登录</h2>
+        <form method="POST" action="/judge">
+            <div class="form-group">
+                <label for="username">用户名</label>
+                <input type="text" id="username" name="uname" placeholder="请输入用户名" required>
+            </div>
+            <div class="form-group">
+                <label for="password">密码</label>
+                <input type="password" id="password" name="passwd" placeholder="请输入密码" required>
+            </div>
+            <input type="submit" value="点我提交"/>
+        </form>
+    </div>
+    <video autoplay muted loop>
+            <source src="/static/video/1.mp4" type="video/mp4">
+            您的浏览器不支持视频标签。
+    </video>
+</body>
+</html>

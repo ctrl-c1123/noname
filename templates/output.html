@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>这么好的装备，快去攻沙！！！</title>
+    <style>
+        .center {
+            text-align: center;
+            color: white;
+        }
+
+        .center1 {
+            text-align: center;
+            color: green;
+        }
+
+        .center2 {
+            text-align: center;
+            color: yellow;
+        }
+
+        .center3 {
+            text-align: center;
+            color: red;
+        }
+    </style>
+</head>
+<body style="background-image: url('/static/picture/123.jpg'); background-size:cover">
+    {% if id == '1' %}
+    <h4 class="center">您的id为：{{id}}的物品为：{{item}} 品质为：{{quality}}</h4><br>
+    <h4 class="center">一把很白色的剑</h4>
+        {% elif id == '2' %}
+        <h3 class="center1">您的id为：{{id}}的物品为：{{item}} 品质为：{{quality}}</h3><br>
+        <h3 class="center1">一口长命百岁~</h3>
+            {% elif id == '3' %}
+            <h2 class="center3">您的id为：{{id}}的物品为：{{item}} 品质为：{{quality}}</h2>
+            <h2 class="center3">一刀999，成龙大哥带你攻沙！！！</h2>
+                {% elif id == '4' %}
+                <h1 class="center3">您的id为：{{id}}的物品为：{{item}} 品质为：{{quality}}</h1>
+                <h1 class="center3">全服仅一枚！！！</h1>
+    {% endif %}
+    <a href="http://127.0.0.1:8888/search">点我重新查询</a>
+</body>
+</html>
